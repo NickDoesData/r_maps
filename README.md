@@ -39,6 +39,10 @@ create_gradient_state_tile_map <- function(state, value, title, legend_title,
   
   return(fig)
 }
+
+tile_map <- create_gradient_state_tile_map(gdp_area$state, gdp_area$gdp, title='State GDP 2016 \n', 
+	legend_title = "GDP, ($, trillions)" )
+tile_map
 ```
 ![Image of Tilemap](https://github.com/NickDoesData/r_maps/blob/master/plots/gdp_tile_map.png)
 
