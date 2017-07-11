@@ -1,10 +1,18 @@
 # r_maps
 
+This repository provides examples of how to visualize geographic data. The function create_gradient_state_tile_map 
+provides users with a standard function to turn any state, value vectors into a ready formatted tilemap.
+
+Dependencies
 ```{r}
-
-
+library(tidyverse)
+library(geofacet)
+```
+Tile maps are excellent alternatives to standard, chloropleth maps. This function will create a gradient
+tile map if provided a state and a value.
+```{r}
 create_gradient_state_tile_map <- function(state, value, title, legend_title, 
-						low_color='#ccdbe5', high_color="#114365", state_grid='us_state_grid2') {
+		low_color='#ccdbe5', high_color="#114365", state_grid='us_state_grid2') {
   
   df <- as.tibble(data.frame(state, value))
   
