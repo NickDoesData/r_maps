@@ -5,8 +5,10 @@ library(geofacet)
 library(stringr)
 library(tidycensus)
 library(fiftystater)
+library(jsonlite)
 
-census_api_key("30b4db6d274abc643545d645254edaadb4e726dc")
+api_key <- fromJSON("auth.json", flatten=TRUE)
+census_api_key(fromJSON("auth.json", flatten=TRUE))
 
 #########################################
 # Data Collection
@@ -172,7 +174,6 @@ create_gradient_state_tile_map <- function(state, value, title, legend_title, lo
 }
 
 # Using 2016 values, create a tile map
-gdp_2016 <- filter(df, date==2016)
 tile_map <- create_gradient_state_tile_map(gdp_area$state, gdp_area$gdp, title='State GDP 2016 \n', legend_title = "GDP, ($, trillions)" )
 tile_map
 
