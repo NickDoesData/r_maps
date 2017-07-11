@@ -4,13 +4,13 @@ This repository provides examples of how to visualize geographic data. The funct
 provides users with a standard function to turn any state, value vectors into a ready formatted tilemap.
 
 Dependencies
-```{r}
+```r
 library(tidyverse)
 library(geofacet)
 ```
 Tile maps are excellent alternatives to standard, chloropleth maps. This function will create a gradient
 tile map if provided a state and a value.
-```{r}
+```r
 create_gradient_state_tile_map <- function(state, value, title, legend_title, 
 		low_color='#ccdbe5', high_color="#114365", state_grid='us_state_grid2') {
   
