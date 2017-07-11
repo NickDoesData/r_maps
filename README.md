@@ -3,7 +3,8 @@
 ```{r}
 
 
-create_gradient_state_tile_map <- function(state, value, title, legend_title, low_color='#ccdbe5', high_color="#114365", state_grid='us_state_grid2') {
+create_gradient_state_tile_map <- function(state, value, title, legend_title, 
+						low_color='#ccdbe5', high_color="#114365", state_grid='us_state_grid2') {
   
   df <- as.tibble(data.frame(state, value))
   
@@ -31,3 +32,5 @@ create_gradient_state_tile_map <- function(state, value, title, legend_title, lo
   return(fig)
 }
 ```
+![Image of Tilemap](https://github.com/NickDoesData/r_maps/blob/master/plots/gdp_tile_map.png)
+
