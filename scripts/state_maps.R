@@ -7,7 +7,7 @@ library(tidycensus)
 library(fiftystater)
 library(jsonlite)
 
-api_key <- fromJSON("auth.json", flatten=TRUE)
+# insert your own API key here
 census_api_key(fromJSON("auth.json", flatten=TRUE))
 
 #########################################
@@ -141,9 +141,8 @@ ggsave('state_gdp_bar_chart.png', width = 5.3, height = 5.3, dpi = 120)
 
 
 #########################################
-# tile map time
+# tile map 
 #########################################
-
 
 create_gradient_state_tile_map <- function(state, value, title, legend_title, low_color='#ccdbe5', high_color="#114365", state_grid='us_state_grid2') {
   
